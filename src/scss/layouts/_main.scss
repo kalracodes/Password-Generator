@@ -1,0 +1,10 @@
+main {
+    @include flex-column(24px);
+    width: 540px;
+}
+
+@media only screen and (max-width : 769px) {
+    main {
+        width: 343px;
+    }
+}

@@ -1,0 +1,23 @@
+* {
+    transition: .15s;
+}
+
+body {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $Dark;
+}
+
+#root {
+    @include flex-column(2rem);
+    align-items: center;
+}
+
+@media only screen and (max-width : 769px) {
+    #root {
+        row-gap: 16px;
+        width: 343px;
+    }
+}

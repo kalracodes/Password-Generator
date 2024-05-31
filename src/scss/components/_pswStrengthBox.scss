@@ -1,0 +1,60 @@
+.PswdStrength {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 32px;
+    max-height: 72px;
+    color : $grey;
+    background-color: $Dark;
+    .Container {
+        @include flex-row(15px);
+        align-items: center;
+        h2 {
+            line-height: 0;
+        }
+        .BoxContainer {
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+            div {
+                width: 6px;
+                height: 24px;
+                border: 2px solid $white;
+            }
+        }
+    }
+}
+
+.tooWeak {
+    #Box1 {
+        border-color: $red;
+        background-color: $red;
+    }
+}
+
+.weak {
+    #Box1 , #Box2 {
+        border-color: $orange;
+        background-color: $orange;
+    }
+}
+
+.medium {
+    #Box1 , #Box2 , #Box3 {
+        border-color: $yellow;
+        background-color: $yellow;
+    }
+}
+
+.strong {
+    #Box1 , #Box2 , #Box3 , #Box4{
+        border-color: $green;
+        background-color: $green;
+    }
+}
+
+@media only screen and (max-width : 769px) {
+    .PswdStrength {
+        padding: 18px 16px;
+    }
+}

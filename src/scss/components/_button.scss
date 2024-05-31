@@ -1,0 +1,23 @@
+.GenerateBtn {
+    @include flex-row(24px);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    border: 2px solid $green;
+    background-color: $green;
+    &:hover {
+        color: $green;
+        border: 2px solid $green;
+        background-color: $black;
+        svg path{
+            fill : $green;
+        }
+    }
+}
+
+@media only screen and (max-width : 769px) {
+    .GenerateBtn {
+        height: 56px;
+    }
+}

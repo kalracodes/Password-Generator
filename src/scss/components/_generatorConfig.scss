@@ -1,0 +1,81 @@
+.GeneratorConfig {
+    @include flex-column(32px);
+    padding: 24px 32px;
+    color: $white;
+    background-color: $black;
+}
+
+.SliderIdle {
+    @include flex-column(16px);
+    .SliderText {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    h1 {
+        color: $green;
+    }
+    .Slider {
+        appearance: none;
+        width: 100%;
+        &::-webkit-slider-thumb {
+            position: relative;
+            cursor: pointer;
+            appearance: none;
+            border: none;
+            height: 28px;
+            width: 28px;
+            margin-top: -10px;
+            border-radius: 50%;
+            background: $white;
+            &:hover {
+                border: 2px solid $green;
+                background: $Dark;
+            }
+        }
+        &::-webkit-slider-runnable-track {
+            height: 28px;
+            border: solid $black;
+            border-width: 10px 0;
+        }
+    }
+}
+
+.CheckBoxContainer {
+    @include flex-column(20px);
+    .CheckBox {
+        @include flex-row(24px);
+        input[type="checkbox"] {
+            appearance: none;
+            cursor: pointer;
+            display: block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid $white;
+            margin: 0;
+            background-color: $black;
+            &:hover {
+                border: 2px solid $green;
+            }
+            &:checked {
+                appearance: auto;
+                accent-color : $green;
+            }
+            
+        }
+    }
+}
+
+@media only screen and (max-width : 769px) {
+    .GeneratorConfig {
+        padding: 16px;
+    }
+
+    .SliderIdle {
+        row-gap: 8px;
+    }
+
+    .CheckBoxContainer {
+        row-gap: 16px;
+    }
+}

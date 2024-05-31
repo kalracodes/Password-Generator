@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,700;1,700&display=swap');
+
+h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 32px;
+    line-height: 43px;
+}
+
+h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+p , label{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+@media only screen and (max-width : 769px) {
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    p , label{
+        font-size: 16px;
+    }
+}
